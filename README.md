@@ -12,4 +12,4 @@ Dojo realizado na Zenvia com base na documentação https://github.com/watson-de
 
 ## To use Conversation
 
-`node translate.js 'Mensagem a ser conversada'`
+`node talk.js 'Mensagem a ser conversada'`
