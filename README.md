@@ -6,10 +6,44 @@ Dojo realizado na Zenvia com base na documentação https://github.com/watson-de
 
 `npm install`
 
+# TODO:
+
+- Send the response somewhere
+- Save and search the conversation_id
+- Discover how pass the username and password with more security
+
+## To start Conversation Connector
+
+`npm start`
+
+## To use Conversation Connector
+
+```
+curl -X POST -v \
+-H 'Content-Type: application/json' \
+-H 'Accept: application/json' \
+-d '{
+  "credentials":{
+    "username":"",
+    "password": ""
+  },
+  "context": {
+    "workspace_id":"",
+    "conversation_id": ""
+  },
+  "content": {
+      "text": ""
+  }
+}' \
+'http://localhost:3000/conversation'
+```
+
+# Extras:
+
 ## To use Translation
 
-`node translate.js 'Mensagem a ser traduzida'`
+`node src/translate.js 'Mensagem a ser traduzida'`
 
 ## To use Conversation
 
-`node talk.js 'Mensagem a ser conversada'`
+`node src/talk.js 'Mensagem a ser conversada'`

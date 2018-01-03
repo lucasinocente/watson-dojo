@@ -1,8 +1,9 @@
 var LanguageTranslatorV2 = require('watson-developer-cloud/language-translator/v2');
+require('dotenv').config();
 
 var language_translator = new LanguageTranslatorV2({
-    username: "<username>",
-    password: "<password>",
+    username: process.env.IBM_TRANSLATION_USERNAME,
+    password: process.env.IBM_TRANSLATION_PASSWORD,
   url: 'https://gateway.watsonplatform.net/language-translator/api/'
 });
 
